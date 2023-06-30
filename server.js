@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:5173",
+    origin: "https://thankful-river-084704d0f.3.azurestaticapps.net",
   })
 );
 app.use(cookieParser());
