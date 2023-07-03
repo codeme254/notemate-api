@@ -7,7 +7,6 @@ import {
   getNotesByUser,
   getSpecificNoteByUser,
 } from "../controllers/notesController.js";
-import { loginRequired } from '../controllers/usersController.js';
 const notesRoutes = (app) => {
   app.route("/notes").get(getNotes);
 

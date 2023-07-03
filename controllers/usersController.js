@@ -9,16 +9,6 @@ await pool.connect();
 const bcryptSalt = bcrypt.genSaltSync(10);
 const jwtSalt = config.jwtSalt;
 
-export const loginRequired = (req, res, next) => {
-  if (req.cookies.token) {
-    console.log(req.cookies.token)
-    next();
-  } else {
-    res.status(401).json({ message: 'Unauthorized. Login required.' });
-  }
-};
-
-
 export const getAllUsers = async (req, res) => {
   try {
     // establishing a connection to the sql server using the sql object and configuration provided in config.sql
